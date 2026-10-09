@@ -1,0 +1,572 @@
+gun_id,range_id,range_start,range_end,damage_start,damage_end,range_continuity_check
+ak12,r0,0,70,33,33,Initial Range
+ak12,r1,70,160,33,21,Match
+bren2,r0,0,70,29,29,Initial Range
+bren2,r1,70,150,29,20,Match
+an94,r0,0,50,30,30,Initial Range
+an94,r1,50,120,30,23,Match
+as_val,r0,0,60,28,28,Initial Range
+as_val,r1,60,120,28,21,Match
+scarl,r0,0,60,33,33,Initial Range
+scarl,r1,60,140,33,25,Match
+aug_a1,r0,0,65,30,30,Initial Range
+aug_a1,r1,65,185,30,24,Match
+m16a4,r0,0,40,34,34,Initial Range
+m16a4,r1,40,140,34,23,Match
+g36,r0,0,80,30,30,Initial Range
+g36,r1,80,150,30,24,Match
+m16a1,r0,0,90,30,30,Initial Range
+m16a1,r1,90,150,30,20,Match
+m16a3,r0,0,80,32,32,Initial Range
+m16a3,r1,80,135,32,22,Match
+type_20,r0,0,35,34,34,Initial Range
+type_20,r0,35,140,34,24,Match
+aug_a2,r0,0,45,35,35,Initial Range
+aug_a2,r1,45,130,35,20,Match
+k2,r0,0,50,34,34,Initial Range
+k2,r1,50,140,34,23,Match
+famas_g2,r0,0,35,29,29,Initial Range
+famas_g2,r1,35,140,29,19,Match
+ak47,r0,0,70,41,41,Initial Range
+ak47,r1,70,140,41,30,Match
+l85a2,r0,0,55,33,33,Initial Range
+l85a2,r1,55,170,33,24,Match
+hk416,r0,0,80,31,31,Initial Range
+hk416,r1,80,150,31,22,Match
+ak74,r0,0,70,34,34,Initial Range
+ak74,r1,70,150,34,23,Match
+famas_f1,r0,0,40,31,31,Initial Range
+famas_f1,r1,40,135,31,20,Match
+qbz95,r0,0,60,35,35,Initial Range
+qbz95,r1,60,160,35,23,Match
+akm,r0,0,60,42,42,Initial Range
+akm,r1,60,130,42,29,Match
+qbz97a,r0,0,60,33,33,Initial Range
+qbz97a,r1,60,150,33,24,Match
+ak103,r0,0,60,38,38,Initial Range
+ak103,r1,60,150,38,27,Match
+tar21,r0,0,70,29,29,Initial Range
+tar21,r1,70,140,29,22,Match
+type_88,r0,0,75,34,34,Initial Range
+type_88,r1,75,135,34,22,Match
+m231,r0,0,30,30,30,Initial Range
+m231,r0,30,140,30,20,Match
+c7a2,r0,0,90,29,29,Initial Range
+c7a2,r1,90,180,29,19,Match
+ak12m,r0,0,55,33,33,Initial Range
+ak12m,r1,55,160,33,23,Match
+mac15,r0,0,80,32,32,Initial Range
+mac15,r1,80,160,32,22,Match
+stg44,r0,0,44,44,44,Initial Range
+stg44,r1,44,144,44,24,Match
+ia2_ar,r0,0,45,30,30,Initial Range
+ia2_ar,r1,45,125,30,22,Match
+bren3,r0,0,50,32,32,Initial Range
+bren3,r1,50,170,32,22,Match
+l85a3,r0,0,85,30,30,Initial Range
+l85a3,r1,85,170,30,24,Match
+ak15,r0,0,75,38,38,Initial Range
+ak15,r1,75,145,38,24,Match
+spear_lt,r0,0,50,38,33,Initial Range
+spear_lt,r1,50,155,33,28,Match
+vhsd2,r0,0,45,32,32,Initial Range
+vhsd2,r1,45,125,32,20,Match
+ak19,r0,0,90,34,34,Initial Range
+ak19,r1,90,145,34,19,Match
+m38a7,r0,0,50,30,30,Initial Range
+m38a7,r1,50,160,30,23,Match
+aek971,r0,0,55,30,30,Initial Range
+aek971,r1,55,155,30,19,Match
+colt_acr,r0,0,60,22,22,Initial Range
+colt_acr,r1,60,150,22,14,Match
+g11k2,r0,0,70,28,28,Initial Range
+g11k2,r0,70,145,28,21,Match
+m14,r0,0,80,40,40,Initial Range
+m14,r1,80,160,40,30,Match
+beowulf_ecr,r0,0,20,49,49,Initial Range
+beowulf_ecr,r1,20,40,49,42,Match
+beowulf_ecr,r2,40,150,42,30,Match
+scarh,r0,0,80,44,44,Initial Range
+scarh,r1,80,165,44,31,Match
+g3,r0,0,60,40,40,Initial Range
+g3,r1,60,180,40,30,Match
+ag3,r0,0,70,38,38,Initial Range
+ag3,r1,70,160,38,27,Match
+hk417,r0,0,65,40,40,Initial Range
+hk417,r1,65,145,40,32,Match
+fal_5063_para,r0,0,70,43,43,Initial Range
+fal_5063_para,r1,70,160,43,28,Match
+henry_4570,r0,0,80,65,65,Initial Range
+henry_4570,r1,80,120,65,45,Match
+fal_50,r0,0,90,40,40,Initial Range
+fal_50,r1,90,160,40,32,Match
+bren2_br,r0,0,60,40,40,Initial Range
+bren2_br,r1,60,150,40,25,Match
+ak308,r0,0,60,39,39,Initial Range
+ak308,r1,60,150,39,28,Match
+ia2_br,r0,0,50,38,38,Initial Range
+ia2_br,r1,50,140,38,31,Match
+m7_ngsw,r0,0,60,38,38,Initial Range
+m7_ngsw,r1,60,140,38,24,Match
+hcar,r0,0,70,70,70,Initial Range
+hcar,r1,70,150,70,34,Match
+doombox,r0,0,60,44,44,Initial Range
+doombox,r1,60,120,44,36,Match
+shak12,r0,0,50,60,60,Initial Range
+shak12,r1,50,160,60,40,Match
+mk17_ultralight,r0,0,80,44,44,Initial Range
+mk17_ultralight,r1,80,165,44,31,Match
+rm_277,r0,0,35,28,30,Initial Range
+rm_277,r1,35,70,30,40,Match
+rm_277,r2,70,105,40,40,Match
+rm_277,r3,105,130,40,30,Match
+rm_277,r4,130,180,30,22,Match
+c25,r0,0,70,32,32,Initial Range
+c25,r1,70,130,32,19,Match
+m4a1,r0,0,45,35,35,Initial Range
+m4a1,r1,45,130,35,19,Match
+g36k,r0,0,70,32,32,Initial Range
+g36k,r1,70,130,32,23,Match
+m4,r0,0,40,35,35,Initial Range
+m4,r1,40,120,35,19,Match
+l22,r0,0,40,30,30,Initial Range
+l22,r1,40,90,30,24,Match
+ak12u,r0,0,50,34,34,Initial Range
+ak12u,r1,50,125,34,18,Match
+groza1,r0,0,60,37,37,Initial Range
+groza1,r1,60,140,37,24,Match
+ots126,r0,0,40,36,36,Initial Range
+ots126,r1,40,70,36,34,Match
+ots126,r2,70,135,34,23,Match
+ak9,r0,0,35,40,40,Initial Range
+ak9,r1,35,110,40,24,Match
+aug_a3,r0,0,40,34,34,Initial Range
+aug_a3,r1,40,150,34,21,Match
+pdc45,r0,0,45,52,52,Initial Range
+pdc45,r1,45,155,52,30,Match
+k1a,r0,0,70,30,30,Initial Range
+k1a,r1,70,130,30,18,Match
+sr3m,r0,0,30,29,29,Initial Range
+sr3m,r1,30,110,29,20,Match
+mk16_socom_sc,r0,0,40,38,38,Initial Range
+mk16_socom_sc,r1,40,140,38,22,Match
+groza4,r0,0,50,38,38,Initial Range
+groza4,r1,50,140,38,20,Match
+mc51sd,r0,0,20,46,46,Initial Range
+mc51sd,r1,20,121,46,25,Match
+1858_carbine,r0,0,80,65,65,Initial Range
+1858_carbine,r1,80,180,65,35,Match
+sa58_osw,r0,0,40,38,38,Initial Range
+sa58_osw,r1,40,125,38,28,Match
+ak105,r0,0,70,34,34,Initial Range
+ak105,r1,70,120,34,22,Match
+jury,r0,0,45,80,80,Initial Range
+jury,r1,45,180,80,50,Match
+c8a3,r0,0,60,30,30,Initial Range
+c8a3,r1,60,145,30,18,Match
+kac_srr,r0,0,60,42,42,Initial Range
+kac_srr,r1,60,200,42,72,Match
+gyrojet_carbine,r0,0,35,45,45,Initial Range
+gyrojet_carbine,r1,35,150,45,70,Match
+x95r,r0,0,65,27,27,Initial Range
+x95r,r1,65,120,27,20,Match
+salty_weasel,r0,0,40,34,34,Initial Range
+salty_weasel,r1,40,110,34,22,Match
+m337,r0,0,60,38,38,Initial Range
+m337,r1,60,125,38,19,Match
+hk51b,r0,0,20,41,41,Initial Range
+hk51b,r1,20,90,41,22,Match
+virtus,r0,0,35,33,33,Initial Range
+virtus,r1,35,110,33,18,Match
+mini_fix,r0,0,50,50,60,Initial Range
+mini_fix,r1,50,90,60,60,Match
+mini_fix,r2,90,120,60,55,Match
+mini_fix,r3,120,200,55,30,Match
+ef88,r0,0,30,35,35,Initial Range
+ef88,r1,30,150,35,19,Match
+aek973s,r0,0,40,37,37,Initial Range
+aek973s,r1,40,120,37,22,Match
+can_cannon,r0,0,50,75,75,Initial Range
+can_cannon,r1,50,175,75,55,Match
+pkp_bychok,r0,0,40,44,44,Initial Range
+pkp_bychok,r1,40,140,44,24,Match
+mts569,r0,0,80,95,95,Initial Range
+mts569,r1,80,110,95,88,Match
+mts569,r2,110,155,88,55,Match
+mts569,r3,155,185,55,47,Match
+qbu88,r0,0,55,38,38,Initial Range
+qbu88,r1,55,140,38,32,Match
+mk11,r0,0,110,45,45,Initial Range
+mk11,r1,110,160,45,38,Match
+sks,r0,0,100,40,40,Initial Range
+sks,r1,100,150,40,29,Match
+sl8,r0,0,88,38,38,Initial Range
+sl8,r1,88,148,38,28,Match
+dragunov_svu,r0,0,80,60,60,Initial Range
+dragunov_svu,r1,80,160,60,42,Match
+vss_vintorez,r0,0,40,55,55,Initial Range
+vss_vintorez,r1,40,130,55,44,Match
+msg90,r0,0,110,50,50,Initial Range
+msg90,r1,110,200,50,40,Match
+m21,r0,0,80,58,58,Initial Range
+m21,r1,80,200,58,40,Match
+beowulf_tcr,r0,0,70,52,52,Initial Range
+beowulf_tcr,r1,70,165,52,38,Match
+sa58_spr,r0,0,70,48,48,Initial Range
+sa58_spr,r1,70,200,48,31,Match
+scar_ssr,r0,0,110,55,55,Initial Range
+scar_ssr,r0,110,200,55,44,Match
+r10_22,r0,0,40,28,28,Initial Range
+r10_22,r1,40,170,28,17,Match
+saiga_sar,r0,0,60,50,50,Initial Range
+saiga_sar,r1,60,150,50,33,Match
+svk12,r0,0,50,44,44,Initial Range
+svk12,r1,50,150,44,34,Match
+bren_2_pps,r0,0,100,47,47,Initial Range
+bren_2_pps,r1,100,180,47,36,Match
+uar_a3m2,r0,0,50,30,34,Initial Range
+uar_a3m2,r1,50,90,34,44,Match
+uar_a3m2,r2,90,170,44,44,Match
+uar_a3m2,r3,170,225,44,32,Match
+regulator,r0,0,50,44,44,Initial Range
+regulator,r1,50,110,44,40,Match
+regulator,r1,110,200,40,24,Match
+m28_gdmr,r0,0,40,44,44,Initial Range
+m28_gdmr,r1,40,170,44,31,Match
+mk12_spr,r0,0,90,33,33,Initial Range
+mk12_spr,r1,90,165,33,25,Match
+colt_lmg,r0,0,60,35,35,Initial Range
+colt_lmg,r1,60,145,35,21,Match
+m249_saw,r0,0,45,32,32,Initial Range
+m249_saw,r1,45,130,32,19,Match
+m60,r0,0,60,40,40,Initial Range
+m60,r1,60,160,40,28,Match
+aug_hbar,r0,0,90,31,31,Initial Range
+aug_hbar,r1,90,200,31,23,Match
+mg36,r0,0,70,31,31,Initial Range
+mg36,r1,70,180,31,22,Match
+rpk12,r0,0,85,32,32,Initial Range
+rpk12,r1,85,175,32,21,Match
+l86_lsw,r0,0,40,34,34,Initial Range
+l86_lsw,r1,40,180,34,24,Match
+ak12br,r0,0,50,31,31,Initial Range
+ak12br,r1,50,160,31,18,Match
+rpk,r0,0,40,44,44,Initial Range
+rpk,r1,40,160,44,31,Match
+hk21e,r0,0,50,38,38,Initial Range
+hk21e,r1,50,160,38,24,Match
+scar_hamr,r0,0,70,32,32,Initial Range
+scar_hamr,r1,70,160,32,23,Match
+rpk74,r0,0,55,35,35,Initial Range
+rpk74,r1,55,185,35,23,Match
+qjb95_lsw,r0,0,80,34,34,Initial Range
+qjb95_lsw,0,80,175,34,22,Match
+mg3kws,0,0,25,39,39,Initial Range
+mg3kws,25,25,42,39,34,Match
+mg3kws,42,42,150,34,23,Match
+falo_5041,0,0,50,39,39,Initial Range
+falo_5041,50,50,150,39,30,Match
+m1918a2,0,0,20,54,54,Initial Range
+m1918a2,20,20,50,54,49,Match
+m1918a2,50,50,110,49,35,Match
+m1918a2,110,110,150,35,32,Match
+m27_iar,r0,0,70,30,30,Initial Range
+m27_iar,r1,70,180,30,19,Match
+rpk16,r0,0,100,30,30,Initial Range
+rpk16,r1,100,180,30,23,Match
+pkp_pecheneg,r0,0,50,38,38,Initial Range
+pkp_pecheneg,r1,50,145,38,25,Match
+mgv176,r0,0,35,18,18,Initial Range
+mgv176,r1,35,120,18,15,Match
+pkm,r0,0,50,40,40,Initial Range
+pkm,r1,50,180,40,28,Match
+stoner_96,r0,0,70,30,30,Initial Range
+stoner_96,r1,70,150,30,24,Match
+aek999,r0,0,75,39,39,Initial Range
+aek999,r1,75,150,39,25,Match
+chainsaw,r0,0,60,35,35,Initial Range
+chainsaw,r1,60,120,35,23,Match
+mg42,r0,0,20,40,40,Initial Range
+mg42,r1,20,120,40,25,Match
+reapr338,r0,0,30,74,66,Initial Range
+reapr338,r1,30,50,66,48,Match
+reapr338,r2,50,160,48,30,Match
+kordr,r0,0,70,95,95,Initial Range
+kordr,r1,70,110,95,80,Match
+kordr,r2,110,150,80,75,Match
+mp5k,r0,0,20,34,34,Initial Range
+mp5k,r1,20,100,34,17,Match
+ump45,r0,0,30,45,45,Initial Range
+ump45,r1,30,120,45,23,Match
+g36c,r0,0,60,33,33,Initial Range
+g36c,r1,60,110,33,21,Match
+mp7,r0,0,50,25,25,Initial Range
+mp7,r1,50,120,25,17,Match
+mac10,r0,0,40,38,38,Initial Range
+mac10,r1,40,110,38,18,Match
+p90,r0,0,50,24,24,Initial Range
+p90,r1,50,140,24,16,Match
+mp9,r0,0,55,29,29,Initial Range
+mp9,r1,55,130,29,18,Match
+scar_pdw,r0,0,60,32,32,Initial Range
+scar_pdw,r1,60,120,32,25,Match
+colt_mars,r0,0,45,32,32,Initial Range
+colt_mars,r1,45,110,32,21,Match
+mp5,r0,0,50,34,34,Initial Range
+mp5,r1,50,120,34,19,Match
+colt_smg,r0,0,45,32,32,Initial Range
+colt_smg,r1,45,125,32,19,Match
+l2a3,r0,0,55,36,36,Initial Range
+l2a3,r1,55,125,36,24,Match
+mp5sd,r0,0,45,37,37,Initial Range
+mp5sd,r1,45,110,37,17,Match
+honey_badger,r0,0,65,33,33,Initial Range
+honey_badger,r1,65,105,33,22,Match
+mp10,r0,0,80,29,29,Initial Range
+mp10,r1,80,150,29,22,Match
+m3a1,r0,0,60,52,50,Initial Range
+m3a1,r1,60,110,50,34,Match
+m3a1,r2,110,170,34,20,Match
+mp5_10,r0,0,40,38,38,Initial Range
+mp5_10,r1,40,130,38,21,Match
+uzi,r0,0,60,35,35,Initial Range
+uzi,r1,60,150,35,20,Match
+aug_a3_para,r0,0,60,37,37,Initial Range
+aug_a3_para,r1,60,140,37,19,Match
+k7,r0,0,60,29,29,Initial Range
+k7,r0,60,120,29,18,Match
+aks74u,r0,0,80,37,33,Initial Range
+aks74u,r1,80,150,33,20,Match
+ppsh41,r0,0,50,24,24,Initial Range
+ppsh41,r1,50,102,24,15,Match
+fal_para_shorty,r0,0,30,44,44,Initial Range
+fal_para_shorty,r1,30,130,44,23,Match
+vector,r0,0,30,40,40,Initial Range
+vector,r1,30,100,40,20,Match
+bizon,r0,0,60,35,35,Initial Range
+bizon,r1,60,120,35,20,Match
+mp40,r0,0,60,38,38,Initial Range
+mp40,r1,60,130,38,22,Match
+x95_smg,r0,0,45,35,35,Initial Range
+x95_smg,r1,45,130,35,19,Match
+tommy_gun,r0,0,60,42,42,Initial Range
+tommy_gun,r1,60,120,42,20,Match
+rama_1130,r0,0,40,31,31,Initial Range
+rama_1130,r1,40,110,31,18,Match
+mac31,r0,0,70,36,36,Initial Range
+mac31,r1,70,130,36,20,Match
+ia2_smg,r0,0,52,36,36,Initial Range
+ia2_smg,r1,52,150,36,22,Match
+bwc9,r0,0,40,34,34,Initial Range
+bwc9,r1,40,100,34,21,Match
+five0,r0,0,35,46,46,Initial Range
+five0,r1,35,100,46,23,Match
+luty,r0,0,35,35,35,Initial Range
+luty,r1,35,130,35,18,Match
+m416c,r0,0,80,34,34,Initial Range
+m416c,r0,80,125,34,18,Match
+rattler,r0,0,40,34,34,Initial Range
+rattler,r1,40,110,34,20,Match
+famas_commando,r0,0,60,31,31,Initial Range
+famas_commando,r1,60,110,31,19,Match
+ksg_12,r0,0,70,29,29,Initial Range
+ksg_12,r1,70,190,29,6,Match
+model_870,r0,0,90,31,31,Initial Range
+model_870,r1,90,220,31,8,Match
+dbv12,r0,0,80,25,25,Initial Range
+dbv12,r1,80,180,25,5,Match
+m37_12g,r0,0,60,28,28,Initial Range
+m37_12g,r1,60,180,28,7,Match
+terminator_12g,r0,0,50,34,34,Initial Range
+terminator_12g,r1,50,240,34,8,Match
+ks23m,r0,0,100,33,33,Initial Range
+ks23m,r1,100,240,33,8,Match
+saiga12,r0,0,60,24,24,Initial Range
+saiga12,r1,60,170,24,6,Match
+stevens_db,r0,0,60,33,33,Initial Range
+stevens_db,r1,60,170,33,7,Match
+egun,r0,0,60,21,21,Initial Range
+egun,r1,60,100,21,8,Match
+scx12,r0,0,90,21,21,Initial Range
+scx12,r1,90,220,21,7,Match
+aa12,r0,0,80,23,23,Initial Range
+aa12,r1,80,170,23,6,Match
+spas12,r0,0,80,24,24,Initial Range
+spas12,r1,80,190,24,5,Match
+dt11,r0,0,50,31,31,Initial Range
+dt11,r0,50,190,31,8,Match
+usas12,r0,0,70,22,22,Initial Range
+usas12,r1,70,180,22,6,Match
+intervention,r0,0,110,90,90,Initial Range
+intervention,r1,110,242,90,80,Match
+model_700,r0,0,65,77,77,Initial Range
+model_700,r1,65,200,77,59,Match
+cs_lr3,r0,0,25,52,52,Initial Range
+cs_lr3,r1,25,150,52,32,Match
+aws,r0,0,50,80,80,Initial Range
+aws,r1,50,115,80,70,Match
+bfg_50,r0,0,50,100,100,Initial Range
+bfg_50,r1,50,250,100,95,Match
+awm,r0,0,50,100,100,Initial Range
+awm,r1,50,140,100,70,Match
+trg42,0,0,80,88,88,Initial Range
+trg42,80,80,230,88,72,Match
+mosin,0,0,50,75,75,Initial Range
+mosin,80,50,200,75,70,Match
+dragunov_svds,0,0,45,60,75,Initial Range
+dragunov_svds,45,45,90,75,70,Match
+dragunov_svds,90,90,180,70,50,Match
+m110a1_csass,0,0,60,62,62,Initial Range
+m110a1_csass,60,60,170,62,48,Match
+cs_lr4a,0,0,75,68,68,Initial Range
+cs_lr4a,75,75,175,68,50,Match
+the_fix,0,0,30,65,70,Initial Range
+the_fix,30,30,60,70,85,Match
+the_fix,60,60,100,85,85,Match
+the_fix,100,100,150,85,80,Match
+m1903,r0,0,75,80,80,Initial Range
+m1903,r1,75,200,80,65,Match
+k14,r0,0,38,60,60,Initial Range
+k14,r1,38,160,60,45,Match
+rcs10_22,r0,0,60,26,26,Initial Range
+rcs10_22,r1,60,170,26,21,Match
+hecate,r0,0,40,97,97,Initial Range
+hecate,r1,40,200,97,88,Match
+ft300,r0,0,115,75,75,Initial Range
+ft300,r1,115,225,75,53,Match
+m107,r0,0,80,75,80,Initial Range
+m107,r1,80,150,80,95,Match
+m107,r2,150,250,95,80,Match
+m107,r3,250,350,80,72,Match
+ballista,r0,0,80,95,95,Initial Range
+ballista,r1,80,155,95,68,Match
+steyr_scout,r0,0,80,47,47,Initial Range
+steyr_scout,r1,80,200,47,35,Match
+wa2000,r0,0,40,60,60,Initial Range
+wa2000,r1,40,200,60,40,Match
+timberwolf,r0,0,25,72,75,Initial Range
+timberwolf,r1,25,60,75,90,Match
+timberwolf,r2,60,165,90,85,Match
+timberwolf,r3,165,225,85,60,Match
+ntw20,r0,0,125,110,110,Initial Range
+ntw20,r1,125,250,110,99,Match
+dsr50,r0,0,100,99,99,Initial Range
+dsr50,r1,100,200,99,75,Match
+vks,r0,0,80,100,100,Initial Range
+vks,r1,80,120,100,90,Match
+vks,r0,120,180,90,60,Match
+vks,r1,180,240,60,50,Match
+g17,r0,0,50,34,34,Initial Range
+g17,r1,50,115,34,19,Match
+m9,r0,0,40,35,35,Initial Range
+m9,r1,40,100,35,20,Match
+m1911a1,r0,0,60,48,48,Initial Range
+m1911a1,r1,60,140,48,23,Match
+m17,r0,0,35,36,36,Initial Range
+m17,r1,35,95,36,21,Match
+deagle_l5,r0,0,50,56,56,Initial Range
+deagle_l5,r1,50,100,56,32,Match
+g21,r0,0,40,44,44,Initial Range
+g21,r1,40,120,44,24,Match
+g23,r0,0,45,36,36,Initial Range
+g23,r0,45,110,36,22,Match
+m45a1,r0,0,70,44,44,Initial Range
+m45a1,r1,70,150,44,24,Match
+g40,r0,0,40,36,36,Initial Range
+g40,r1,40,120,36,25,Match
+g50,r0,0,50,47,47,Initial Range
+g50,r1,50,115,47,23,Match
+kg99,r0,0,50,34,34,Initial Range
+kg99,r1,50,90,34,20,Match
+fiveseven,r0,0,80,29,29,Initial Range
+fiveseven,r1,80,120,29,22,Match
+zip22,r0,0,30,15,15,Initial Range
+zip22,r1,30,60,15,12,Match
+gi_m1,r0,0,25,60,60,Initial Range
+gi_m1,r1,25,120,60,34,Match
+hardballer,r0,0,50,44,44,Initial Range
+hardballer,r1,50,100,44,34,Match
+izhevsk_pb,r0,0,20,48,48,Initial Range
+izhevsk_pb,r1,20,50,48,19,Match
+makarov,r0,0,75,36,36,Initial Range
+makarov,r1,75,105,36,20,Match
+gb22,r0,0,60,20,20,Initial Range
+gb22,r1,60,90,20,15,Match
+deagle_xix,r0,0,35,72,72,Initial Range
+deagle_xix,r1,35,110,72,30,Match
+automag_iii,r0,0,40,68,68,Initial Range
+automag_iii,r1,40,150,68,40,Match
+gsh18,r0,0,55,35,35,Initial Range
+gsh18,r1,55,120,35,21,Match
+gyrojet_mark_i,r0,0,35,45,45,Initial Range
+gyrojet_mark_i,r1,35,180,45,70,Match
+gsp,r0,0,65,30,30,Initial Range
+gsp,r1,65,150,30,20,Match
+grizzly,r0,0,30,77,77,Initial Range
+grizzly,r1,30,120,77,33,Match
+m2011,r0,0,50,29,29,Initial Range
+m2011,r1,50,150,29,21,Match
+u416_22,r0,0,60,20,20,Initial Range
+u416_22,r1,60,180,20,14,Match
+alien,r0,0,25,34,34,Initial Range
+alien,r1,25,115,34,16,Match
+af2011_a1,r0,0,25,42,42,Initial Range
+af2011_a1,r1,25,100,42,20,Match
+mac11,r0,0,60,24,24,Initial Range
+mac11,r1,60,85,24,19,Match
+g18c,r0,0,25,30,30,Initial Range
+g18c,r1,25,80,30,17,Match
+93r,r0,0,30,34,34,Initial Range
+93r,r1,30,60,34,20,Match
+pp2000,r0,0,50,37,37,Initial Range
+pp2000,r1,50,110,37,21,Match
+tec9,r0,0,15,25,25,Initial Range
+tec9,r1,15,50,17,17,Mismatch
+micro_uzi,r0,0,21,34,34,Initial Range
+micro_uzi,r1,21,65,34,19,Match
+skorpion,r0,0,40,35,35,Initial Range
+skorpion,r1,40,70,35,17,Match
+asmi,r0,0,40,32,32,Initial Range
+asmi,r1,40,90,32,17,Match
+mp1911,r0,0,25,42,42,Initial Range
+mp1911,r1,25,70,42,22,Match
+arm_pistol,r0,0,40,37,37,Initial Range
+arm_pistol,r1,40,85,37,17,Match
+aek919k,r0,0,30,32,32,Initial Range
+aek919k,r1,30,60,32,19,Match
+mp412_rex,r0,0,65,44,44,Initial Range
+mp412_rex,r1,65,110,44,28,Match
+mateba_6,r0,0,76,46,46,Initial Range
+mateba_6,r1,76,112,46,27,Match
+1858_new_army,r0,0,75,60,60,Initial Range
+1858_new_army,r1,75,140,60,36,Match
+redhawk_44,r0,0,45,59,59,Initial Range
+redhawk_44,r1,45,120,59,35,Match
+judge,r0,0,25,51,51,Initial Range
+judge,r1,25,60,51,15,Match
+executioner,r0,0,40,80,80,Initial Range
+executioner,r1,40,135,80,34,Match
+rsh12,r0,0,55,92,92,Initial Range
+rsh12,r1,55,85,92,85,Match
+rsh12,r2,85,130,85,52,Match
+rsh12,r1,130,160,52,43,Match
+super_shorty,r0,0,70,26,26,Initial Range
+super_shorty,r1,70,140,26,7,Match
+stakeout,r0,0,60,24,24,Initial Range
+stakeout,r1,60,115,24,6,Match
+sfg_50,r0,0,50,100,100,Initial Range
+sfg_50,r1,50,250,100,85,Match
+m79_thumper,r0,0,70,20,20,Initial Range
+m79_thumper,r1,70,190,20,6,Match
+coilgun,r0,0,50,19,19,Initial Range
+coilgun,r1,50,80,19,5,Match
+sawed_off,r0,0,60,35,35,Initial Range
+sawed_off,r1,60,160,35,4,Match
+saiga12u,r0,0,60,24,24,Initial Range
+saiga12u,r1,60,160,24,5,Match
+obrez,r0,0,50,50,50,Initial Range
+obrez,r1,50,100,50,40,Match
+sass_308,r0,0,30,75,75,Initial Range
+sass_308,r1,30,145,75,70,Match
+thunder,r0,0,25,105,105,Initial Range
+thunder,r1,25,160,105,70,Match

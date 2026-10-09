@@ -1,0 +1,272 @@
+gun_id,gun_name,type,category,rank
+ak12,AK-12,primary,assault rifle,0
+bren2,VZ.806,primary,assault rifle,0
+an94,AN-94,primary,assault rifle,10
+as_val,AS VAL,primary,assault rifle,15
+scarl,MK16 SOCOM,primary,assault rifle,16
+aug_a1,UAR A1,primary,assault rifle,20
+m16a4,M16A4,primary,assault rifle,22
+g36,AR36,primary,assault rifle,25
+m16a1,M16A1,primary,assault rifle,28
+m16a3,M16A3,primary,assault rifle,31
+type_20,Type 20,primary,assault rifle,37
+aug_a2,F90 MBR,primary,assault rifle,39
+k2,K2,primary,assault rifle,42
+famas_g2,FAMAS G2,primary,assault rifle,45
+ak47,AK-47,primary,assault rifle,47
+l85a2,L85A2,primary,assault rifle,55
+hk416,M416,primary,assault rifle,64
+ak74,AK-74,primary,assault rifle,74
+famas_f1,FAMAS F1,primary,assault rifle,83
+qbz95,QBZ-95,primary,assault rifle,90
+akm,AKM,primary,assault rifle,94
+qbz97a,QBZ-97A,primary,assault rifle,97
+ak103,AK-103,primary,assault rifle,103
+tar21,TAR-21,primary,assault rifle,111
+type_88,Type 88,primary,assault rifle,122
+m231,M231,primary,assault rifle,123
+c7a2,C7A2,primary,assault rifle,128
+ak12m,AK-12M,primary,assault rifle,134
+mac15,MAC-15,primary,assault rifle,141
+stg44,StG-44,primary,assault rifle,144
+ia2_ar,IA2 AR,primary,assault rifle,148
+bren3,VZ.808,primary,assault rifle,153
+l85a3,L85A3,primary,assault rifle,158
+ak15,AK-15,primary,assault rifle,163
+spear_lt,Spear LT,primary,assault rifle,167
+vhsd2,VHS-D2,primary,assault rifle,172
+ak19,AK-19,primary,assault rifle,178
+m38a7,M38A7,primary,assault rifle,183
+aek971,AEK-971,primary,assault rifle,197
+colt_acr,M16A2E2 ACR,primary,assault rifle,202
+g11k2,Gerat 90,primary,assault rifle,211
+m14,M14,primary,battle rifle,2
+beowulf_ecr,Neowulf ECR,primary,battle rifle,21
+scarh,MK17 SOCOM,primary,battle rifle,30
+g3,STG-59H,primary,battle rifle,59
+ag3,Gustav 66,primary,battle rifle,76
+hk417,M417A2,primary,battle rifle,78
+fal_5063_para,FAL 50.63 Para,primary,battle rifle,89
+henry_4570,Henry 45-70,primary,battle rifle,96
+fal_50,FAL 50.00,primary,battle rifle,107
+bren2_br,VZ.806 BR,primary,battle rifle,129
+ak308,AK-308,primary,battle rifle,142
+ia2_br,IA2 BR,primary,battle rifle,154
+m7_ngsw,M7 NGSW,primary,battle rifle,165
+hcar,HCAR,primary,battle rifle,181
+doombox,Doombox,primary,battle rifle,193
+shak12,ShAK-12,primary,battle rifle,212
+mk17_ultralight,MK17 Ultralight,primary,battle rifle,218
+rm_277,RM 277,primary,battle rifle,277
+c25,C25,primary,carbine,0
+m4a1,M4A1,primary,carbine,0
+g36k,AR36K,primary,carbine,6
+m4,M4,primary,carbine,14
+l22,L22A2,primary,carbine,28
+ak12u,AK-12U,primary,carbine,35
+groza1,Groza-1,primary,carbine,42
+ots126,OTs-126,primary,carbine,48
+ak9,AK-9,primary,carbine,51
+aug_a3,UAR A3,primary,carbine,52
+pdc45,PDC-45,primary,carbine,58
+k1a,K1A,primary,carbine,63
+sr3m,SR-3M,primary,carbine,69
+mk16_socom_sc,MK16 SOCOM SC,primary,carbine,75
+groza4,Groza-4,primary,carbine,79
+mc51sd,STG-89C,primary,carbine,86
+1858_carbine,1858 Carbine,primary,carbine,93
+sa58_osw,SA58 OSW,primary,carbine,98
+ak105,AK-105,primary,carbine,105
+jury,Jury,primary,carbine,114
+c8a3,C8A3,primary,carbine,119
+kac_srr,R Squared,primary,carbine,125
+gyrojet_carbine,Gyrojet Carbine,primary,carbine,127
+x95r,X95R,primary,carbine,130
+salty_weasel,Salty Weasel,primary,carbine,137
+m337,M337,primary,carbine,147
+hk51b,MG89B,primary,carbine,157
+virtus,Virtus,primary,carbine,168
+mini_fix,Mini Fix,primary,carbine,175
+ef88,EF88,primary,carbine,188
+aek973s,AEK-973S,primary,carbine,192
+can_cannon,Cola Cannon,primary,carbine,222
+pkp_bychok,PKP Bychok,primary,carbine,254
+mts569,MTs-569,primary,carbine,269
+qbu88,QBU-88,primary,dmr,0
+mk11,MK11,primary,dmr,3
+sks,SKS,primary,dmr,13
+sl8,PL8,primary,dmr,34
+dragunov_svu,Dragunov SVU,primary,dmr,38
+vss_vintorez,VSS Vintorez,primary,dmr,46
+msg90,JG-90,primary,dmr,59
+m21,M21,primary,dmr,68
+beowulf_tcr,Neowulf TCR,primary,dmr,70
+sa58_spr,SA58 SPR,primary,dmr,78
+scar_ssr,MK20 SSR,primary,dmr,85
+r10_22,R-10/22,primary,dmr,102
+saiga_sar,Saiga SAR,primary,dmr,106
+svk12,SVK-12,primary,dmr,116
+bren_2_pps,VZ.806 PPS,primary,dmr,135
+uar_a3m2,UAR A3M2,primary,dmr,156
+regulator,Regulator,primary,dmr,166
+m28_gdmr,M28 GDMR,primary,dmr,182
+mk12_spr,MK12 SPR,primary,dmr,204
+colt_lmg,LSV M/04,primary,lmg,0
+m249_saw,M249 SAW,primary,lmg,0
+m60,M60E6,primary,lmg,19
+aug_hbar,UAR HBAR,primary,lmg,27
+mg36,IAR36,primary,lmg,33
+rpk12,RPK-12,primary,lmg,37
+l86_lsw,L86A2 LSW,primary,lmg,43
+ak12br,AK-12BR,primary,lmg,44
+rpk,RPK,primary,lmg,54
+hk21e,MG80,primary,lmg,67
+scar_hamr,HAMR IAR,primary,lmg,72
+rpk74,RPK-74,primary,lmg,88
+qjb95_lsw,QJB-95 LSW,primary,lmg,95
+mg3kws,MG3KWS,primary,lmg,101
+falo_5041,FALO 50.41,primary,lmg,109
+m1918a2,M1918A2,primary,lmg,118
+m27_iar,M27 IAR,primary,lmg,127
+rpk16,RPK-16,primary,lmg,151
+pkp_pecheneg,PKP Pecheneg,primary,lmg,161
+mgv176,MGV-176,primary,lmg,176
+pkm,PKM,primary,lmg,186
+stoner_96,Stoner 96,primary,lmg,196
+aek999,AEK-999,primary,lmg,222
+chainsaw,ChainSAW,primary,lmg,226
+mg42,MG42,primary,lmg,242
+reapr338,REAPR-338,primary,lmg,266
+kordr,Kord-R,primary,lmg,362
+mp5k,SMX-9K,primary,pdw,0
+ump45,PDX-45,primary,pdw,5
+g36c,AR36C,primary,pdw,7
+mp7,X46A2,primary,pdw,9
+mac10,MAC-10,primary,pdw,23
+p90,P90,primary,pdw,24
+mp9,MP-9,primary,pdw,29
+scar_pdw,MK16 SOCOM CQB,primary,pdw,32
+colt_mars,MARS,primary,pdw,36
+mp5,SMX-9,primary,pdw,40
+colt_smg,XM633 DOE,primary,pdw,49
+l2a3,L2A3,primary,pdw,53
+mp5sd,SMX-9SD,primary,pdw,60
+honey_badger,Honey Badger,primary,pdw,62
+mp10,SMX-10,primary,pdw,66
+m3a1,M3A1,primary,pdw,71
+mp5_10,SMX-9/10,primary,pdw,74
+uzi,Uzi,primary,pdw,77
+aug_a3_para,UAR A3 Para,primary,pdw,80
+k7,K7,primary,pdw,84
+aks74u,AKS-74U,primary,pdw,88
+ppsh41,PPSh-41,primary,pdw,92
+fal_para_shorty,FAL Para Shorty,primary,pdw,98
+vector,Vector 45,primary,pdw,100
+bizon,PP-19 Bizon,primary,pdw,105
+mp40,MP40,primary,pdw,108
+x95_smg,X95 SMG,primary,pdw,115
+tommy_gun,Tommy Gun,primary,pdw,121
+rama_1130,RAMA 1130,primary,pdw,126
+mac31,MAC-31,primary,pdw,131
+ia2_smg,IA2 SMG,primary,pdw,139
+bwc9,BWC9 A,primary,pdw,149
+five0,Five-0,primary,pdw,155
+luty,Luty,primary,pdw,159
+m416c,M416C,primary,pdw,164
+rattler,Rattler,primary,pdw,169
+famas_commando,FAMAS Commando,primary,pdw,194
+ksg_12,KSG 12,primary,shotgun,1
+model_870,Model 870,primary,shotgun,11
+dbv12,AK-12/76,primary,shotgun,24
+m37_12g,M37 12G,primary,shotgun,37
+terminator_12g,Terminator 12G,primary,shotgun,50
+ks23m,KS-23M,primary,shotgun,56
+saiga12,Saiga-12,primary,shotgun,63
+stevens_db,Stevens DB,primary,shotgun,81
+egun,E-Gun,primary,shotgun,87
+scx12,SCX-12,primary,shotgun,99
+aa12,AA-12,primary,shotgun,112
+spas12,SPAS-12,primary,shotgun,120
+dt11,DT11,primary,shotgun,133
+usas12,USAS-12,primary,shotgun,180
+intervention,Intervention,primary,sniper,0
+model_700,Model 700,primary,sniper,12
+cs_lr3,CS/LR-3,primary,sniper,26
+aws,AWS,primary,sniper,41
+bfg_50,BFG 50,primary,sniper,65
+awm,AWM,primary,sniper,82
+trg42,TRG-42,primary,sniper,84
+mosin,Mosin Nagant,primary,sniper,91
+dragunov_svds,Dragunov SVDS,primary,sniper,104
+m110a1_csass,M110A1 CSASS,primary,sniper,110
+cs_lr4a,CS/LR-4A,primary,sniper,117
+the_fix,The Fix,primary,sniper,124
+m1903,M1903,primary,sniper,136
+k14,K14,primary,sniper,138
+rcs10_22,RCS-10/22,primary,sniper,145
+hecate,Hecate II,primary,sniper,150
+ft300,FT300,primary,sniper,160
+m107,M82A1,primary,sniper,170
+ballista,Ballista,primary,sniper,180
+steyr_scout,Scout Rifle,primary,sniper,195
+wa2000,WA2000,primary,sniper,200
+timberwolf,Timberwolf,primary,sniper,210
+ntw20,NTW-20,primary,sniper,220
+dsr50,DSR-50,primary,sniper,230
+vks,VKS,primary,sniper,250
+g17,G17,secondary,pistol,0
+m9,M9,secondary,pistol,0
+m1911a1,M1911A1,secondary,pistol,8
+m17,M17,secondary,pistol,13
+deagle_l5,Deagle L5,secondary,pistol,18
+g21,G21,secondary,pistol,21
+g23,G23,secondary,pistol,23
+m45a1,M45A1,secondary,pistol,34
+g40,G40,secondary,pistol,40
+g50,G50,secondary,pistol,50
+kg99,KG-99,secondary,pistol,50
+fiveseven,Five-seveN,secondary,pistol,57
+zip22,ZiP 22,secondary,pistol,61
+gi_m1,GI M1,secondary,pistol,73
+hardballer,Hardballer,secondary,pistol,84
+izhevsk_pb,Izhevsk PB,secondary,pistol,91
+makarov,Makarov PM,secondary,pistol,92
+gb22,GB-22,secondary,pistol,99
+deagle_xix,Deagle XIX,secondary,pistol,102
+automag_iii,Automag III,secondary,pistol,109
+gsh18,GSh-18,secondary,pistol,119
+gyrojet_mark_i,Gyrojet Mark I,secondary,pistol,122
+gsp,GSP,secondary,pistol,131
+grizzly,Grizzly,secondary,pistol,143
+m2011,M2011,secondary,pistol,146
+u416_22,U-416/22,secondary,pistol,152
+alien,Alien,secondary,pistol,179
+af2011_a1,AF2011-A1,secondary,pistol,201
+mac11,MAC-11,secondary,machine pistol,0
+g18c,G18C,secondary,machine pistol,17
+93r,93R,secondary,machine pistol,26
+pp2000,PP-2000,secondary,machine pistol,42
+tec9,TEC-9,secondary,machine pistol,50
+micro_uzi,Micro Uzi,secondary,machine pistol,68
+skorpion,Škorpion VZ.61,secondary,machine pistol,87
+asmi,ASMI,secondary,machine pistol,97
+mp1911,MP1911,secondary,machine pistol,106
+arm_pistol,Arm Pistol,secondary,machine pistol,110
+aek919k,AEK-919K,secondary,machine pistol,191
+mp412_rex,MP412 Rex,secondary,revolver,4
+mateba_6,Mateba 6,secondary,revolver,29
+1858_new_army,1858 New Army,secondary,revolver,58
+redhawk_44,RH-44,secondary,revolver,83
+judge,Judge,secondary,revolver,113
+executioner,Executioner,secondary,revolver,137
+rsh12,RSh-12,secondary,revolver,221
+super_shorty,Super Shorty,secondary,others,36
+stakeout,Stakeout,secondary,others,67
+sfg_50,sfg 50,secondary,others,75
+m79_thumper,M79 Thumper,secondary,others,79
+coilgun,Coilgun,secondary,others,87
+sawed_off,Sawed Off,secondary,others,90
+saiga12u,Saiga-12U,secondary,others,95
+obrez,Obrez,secondary,others,117
+sass_308,SASS 308,secondary,others,132
+thunder,Thunder,secondary,others,190
