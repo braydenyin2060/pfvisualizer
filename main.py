@@ -98,7 +98,7 @@ def main():
     data = data_loader.load_all("data")
     guns = data["gun_names"]  # check data.keys() if this key name is different
  
-    gun_a = calculator.get_gun(guns, "ak-47")
+    gun_a = calculator.get_gun(guns, "AF2011-A1")
     gun_b = calculator.get_gun(guns, "F90 MBR")
  
     # Quick text readout of who wins at each distance

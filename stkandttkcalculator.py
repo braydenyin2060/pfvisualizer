@@ -1,25 +1,47 @@
+"""
+Phantom Forces STK (Shots-To-Kill) Calculator
+
+Data lives in separate CSVs loaded by data_loader.py. This module is pure
+math: it never reads files, it takes the tables (or plain numbers) as
+arguments.
+
+damage_ranges table: one row per falloff segment per gun, with columns
+    gun_id, range_id, range_start, range_end, damage_start, damage_end
+Within a segment, damage interpolates linearly from damage_start to
+damage_end.
+
+multipliers table: one row per gun, with columns
+    gun_id, head_multi, torso_multi
+"""
+
 import math
 import pandas as pd
- 
+
 DEFAULT_MAX_HEALTH = 100
- 
- 
+_EPS = 1e-9   # guards float error when damage lands exactly on max_health
+
+
+def _simplify(name) -> str:
+    """Lowercase letters and digits only, so "VHS-D2", "vhs d2" and "VHSD2" all match."""
+    return "".join(ch for ch in str(name).lower() if ch.isalnum())
+
+
 def get_gun(df: pd.DataFrame, gun_name: str) -> pd.Series:
     """
-    Looks up a single gun's row by name (case-insensitive). Raises a clear
-    error if the name doesn't match anything.
+    Looks up a single gun's row by name, ignoring case, spaces and dashes.
+    Raises a clear error if the name doesn't match anything.
     """
-    matches = df[df["gun_name"].str.lower() == gun_name.lower()]
+    matches = df[df["gun_name"].map(_simplify) == _simplify(gun_name)]
     if matches.empty:
         raise ValueError(f"No gun named '{gun_name}' found in the dataframe.")
     return matches.iloc[0]
- 
- 
+
+
 def damage_at_range(damage_ranges: pd.DataFrame, gun_id, distance: float) -> float:
     """
     Base (unmultiplied) damage for one gun at a given distance, using that
     gun's rows in the damage_ranges table.
- 
+
     - Before the first segment starts: damage_start of the first segment.
     - Inside a segment (range_start <= distance < range_end): linear
       interpolation between damage_start and damage_end.
@@ -31,11 +53,11 @@ def damage_at_range(damage_ranges: pd.DataFrame, gun_id, distance: float) -> flo
     segments = damage_ranges[damage_ranges["gun_id"] == gun_id].sort_values("range_start")
     if segments.empty:
         raise ValueError(f"No damage ranges found for gun_id {gun_id}.")
- 
+
     first = segments.iloc[0]
     if distance <= first["range_start"]:
         return float(first["damage_start"])
- 
+
     previous_end_damage = float(first["damage_start"])
     for seg in segments.itertuples():
         start, end = seg.range_start, seg.range_end
@@ -50,8 +72,8 @@ def damage_at_range(damage_ranges: pd.DataFrame, gun_id, distance: float) -> flo
             return float(seg.damage_start + t * (seg.damage_end - seg.damage_start))
         previous_end_damage = float(seg.damage_end)
     return previous_end_damage
- 
- 
+
+
 def lowest_stk(damage_ranges: pd.DataFrame, multipliers: pd.DataFrame, gun_id,
                max_health: int = DEFAULT_MAX_HEALTH) -> int:
     """
@@ -62,14 +84,14 @@ def lowest_stk(damage_ranges: pd.DataFrame, multipliers: pd.DataFrame, gun_id,
     best_damage = max(segs["damage_start"].max(), segs["damage_end"].max())
     head_multi = hit_profile(multipliers, gun_id)["H"]
     return math.ceil(max_health / (best_damage * head_multi))
- 
- 
+
+
 def hit_profile(multipliers: pd.DataFrame, gun_id) -> dict:
     """
     Maps hit-location label -> damage multiplier for one gun, using that
     gun's row in the multipliers table (columns: gun_id, head_multi,
     torso_multi).
- 
+
     Always includes "H" (headshot) and "L" (limbshot, 1.0x baseline).
     Also includes "T" (torso) whenever the gun has a torso multiplier
     that's genuinely different from 1.0 — if torso_multi is missing or
@@ -80,14 +102,14 @@ def hit_profile(multipliers: pd.DataFrame, gun_id) -> dict:
     if rows.empty:
         raise ValueError(f"No multipliers found for gun_id {gun_id}.")
     row = rows.iloc[0]
- 
+
     profile = {"H": float(row["head_multi"]), "L": 1.0}
     torso_multi = row["torso_multi"]
     if pd.notna(torso_multi) and not math.isclose(torso_multi, 1.0):
         profile["T"] = float(torso_multi)
     return profile
- 
- 
+
+
 def stk_at_range(damage: float, profile: dict, max_health: int = DEFAULT_MAX_HEALTH) -> dict:
     """
     All possible STK values at a specific distance, one per hit location,
@@ -95,7 +117,7 @@ def stk_at_range(damage: float, profile: dict, max_health: int = DEFAULT_MAX_HEA
     e.g. {"H": 4, "L": 6} means an all-headshot kill takes 4 shots at this
     range, an all-limb kill takes 6 (or {"H": 4, "T": 6} for a gun that has
     a torso multiplier).
- 
+
     damage is the base damage at the distance you care about, i.e. the
     output of damage_at_range(); profile is the output of hit_profile().
     """
@@ -103,8 +125,8 @@ def stk_at_range(damage: float, profile: dict, max_health: int = DEFAULT_MAX_HEA
         label: math.ceil(max_health / (damage * multi))
         for label, multi in profile.items()
     }
- 
- 
+
+
 def _count_splits(total: int, num_labels: int):
     """
     Yields every tuple of non-negative ints of length num_labels that sums
@@ -117,19 +139,23 @@ def _count_splits(total: int, num_labels: int):
     for first in range(total, -1, -1):
         for rest in _count_splits(total - first, num_labels - 1):
             yield (first,) + rest
- 
- 
+
+
 def shot_combinations(damage: float, profile: dict, max_health: int = DEFAULT_MAX_HEALTH) -> dict:
     """
-    All minimal shot-type combinations that kill in exactly N shots, for
-    every achievable N at this distance. Returns {N: [[label, ...], ...]}.
- 
-    A combo of N shots is "minimal" for N if the full set reaches
-    max_health, but dropping the single weakest shot in the set would not
-    — i.e. you genuinely need all N shots, not just some subset of them.
-    Without this check you'd get redundant combos (e.g. "H H H L" showing
-    up again with an extra wasted shot at N+1).
- 
+    Every shot-type combination that can kill on exactly shot N, for every
+    achievable N at this distance. Returns {N: [[label, ...], ...]}.
+
+    A set of N hits counts for N if the full set reaches max_health, but
+    firing the strongest hit LAST, the other N-1 hits would not have killed
+    yet. Order matters: the same set can kill earlier in another order, e.g.
+    "H H T" kills on shot 3 as H, T, H but on shot 2 as H, H, T. So a set
+    appears under N whenever at least one order kills on shot N.
+
+    This list is complete, but a set's chance of happening depends on how
+    many of its orderings actually kill on shot N (see
+    ttk_expectation.combos_with_probabilities).
+
     Handles however many hit locations hit_profile() returns for this gun
     (typically "H" + "L", or "H" + "T" + "L" when the gun has a distinct
     torso multiplier) — not hardcoded to exactly two.
@@ -137,19 +163,20 @@ def shot_combinations(damage: float, profile: dict, max_health: int = DEFAULT_MA
     dmg = damage
     labels = sorted(profile, key=lambda label: -profile[label])  # highest damage first
     dmgs = [dmg * profile[label] for label in labels]
- 
+
     min_n = math.ceil(max_health / max(dmgs))
     max_n = math.ceil(max_health / min(dmgs))
- 
+
     combos = {}
     for n in range(min_n, max_n + 1):
         valid = []
         for counts in _count_splits(n, len(labels)):
             total = sum(count * d for count, d in zip(counts, dmgs))
-            if total < max_health:
+            if total < max_health - _EPS:
                 continue
             present_damages = [d for count, d in zip(counts, dmgs) if count > 0]
-            if total - min(present_damages) < max_health:
+            # strongest hit last: the first N-1 hits must still be alive
+            if total - max(present_damages) < max_health - _EPS:
                 combo = []
                 for count, label in zip(counts, labels):
                     combo.extend([label] * count)
@@ -157,8 +184,8 @@ def shot_combinations(damage: float, profile: dict, max_health: int = DEFAULT_MA
         if valid:
             combos[n] = valid
     return combos
- 
- 
+
+
 def stk_range_shotsonly(damage: float, profile: dict, max_health: int = DEFAULT_MAX_HEALTH) -> list:
     """
     All achievable STK counts at a specific distance, without the shot-type
@@ -166,8 +193,8 @@ def stk_range_shotsonly(damage: float, profile: dict, max_health: int = DEFAULT_
     [2, 3, 4] instead of the full "H H", "H T T", "L L L L" breakdown.
     """
     return sorted(shot_combinations(damage, profile, max_health).keys())
- 
- 
+
+
 def ttk_seconds(num_shots: int, rpm: float) -> float:
     """
     Time (seconds) to land num_shots shots, given the gun's rate of fire
@@ -179,8 +206,8 @@ def ttk_seconds(num_shots: int, rpm: float) -> float:
         return 0.0
     seconds_between_shots = 60.0 / rpm
     return (num_shots - 1) * seconds_between_shots
- 
- 
+
+
 def format_combinations(combos: dict, rpm: float = None) -> str:
     """
     Pretty-prints shot_combinations() output as '4SK: H H H H, H H H L'.
@@ -196,8 +223,8 @@ def format_combinations(combos: dict, rpm: float = None) -> str:
         else:
             lines.append(f"{n}SK: {combo_strs}")
     return "\n".join(lines)
- 
- 
+
+
 def get_rpm(fire_modes: pd.DataFrame, gun_id, fire_mode: str = None) -> float:
     """
     RPM for one gun from the fire_modes table. A gun can have several rows
@@ -210,19 +237,19 @@ def get_rpm(fire_modes: pd.DataFrame, gun_id, fire_mode: str = None) -> float:
     if rows.empty:
         raise ValueError(f"No fire mode found for gun_id {gun_id}.")
     return float(rows.iloc[0]["start_rpm"])
- 
- 
+
+
 def stk_ttk_at_range(data: dict, gun_id, distance: float, max_health: int = DEFAULT_MAX_HEALTH) -> list:
     """
     [(shots, ttk_seconds), ...] for every achievable STK at this distance,
     e.g. [(2, 0.085), (3, 0.170), (4, 0.255)].
     """
     dmg = damage_at_range(data["damage_ranges"], gun_id, distance)
-    profile = hit_profile(data["damage_multis"], gun_id)
+    profile = hit_profile(data["multipliers"], gun_id)
     rpm = get_rpm(data["fire_modes"], gun_id)
     return [(n, ttk_seconds(n, rpm)) for n in stk_range_shotsonly(dmg, profile, max_health)]
- 
- 
+
+
 def compare_ttk(data: dict, gun_id_a, gun_id_b, distance: float, max_health: int = DEFAULT_MAX_HEALTH):
     """
     Which gun has the faster best-case (all-headshot) TTK at this distance.
@@ -233,42 +260,33 @@ def compare_ttk(data: dict, gun_id_a, gun_id_b, distance: float, max_health: int
     if math.isclose(best_a, best_b):
         return None
     return gun_id_a if best_a < best_b else gun_id_b
- 
- 
+
+
 if __name__ == "__main__":
-    # Real usage:
-    #   import data_loader
-    #   data = data_loader.load_all("data")
-    #   gun = get_gun(data["guns"], "C7A2")
-    #   gid = gun["gun_id"]
-    #   dmg = damage_at_range(data["damage_ranges"], gid, distance=90)
-    #   profile = hit_profile(data["multipliers"], gid)
-    #   print(format_combinations(shot_combinations(dmg, profile), rpm=...))
- 
-    # --- inline demo with fake data so this runs standalone ---
-    ranges = pd.DataFrame([
-        {"gun_id": 1, "range_id": 1, "range_start": 0,  "range_end": 15,   "damage_start": 34, "damage_end": 34},
-        {"gun_id": 1, "range_id": 2, "range_start": 15, "range_end": 90,   "damage_start": 34, "damage_end": 19},
-        {"gun_id": 1, "range_id": 3, "range_start": 90, "range_end": 9999, "damage_start": 19, "damage_end": 19},
-        {"gun_id": 2, "range_id": 1, "range_start": 0,  "range_end": 9999, "damage_start": 31.25, "damage_end": 31.25},
-    ])
-    mults = pd.DataFrame([
-        {"gun_id": 1, "head_multi": 1.5, "torso_multi": 1.0},
-        {"gun_id": 2, "head_multi": 1.6, "torso_multi": 1.3},
-    ])
- 
-    for dist in [0, 15, 50, 90, 150]:
-        dmg = damage_at_range(ranges, 1, dist)
-        print(f"C7A2 @ {dist}: dmg={dmg:.2f}, STK={stk_at_range(dmg, hit_profile(mults, 1))}")
- 
-    print("\nC7A2 @ 90 studs, with TTK (rpm 705):")
-    dmg = damage_at_range(ranges, 1, 90)
-    print(format_combinations(shot_combinations(dmg, hit_profile(mults, 1)), rpm=705))
- 
-    print("\nAS VAL @ 50 studs:")
-    dmg = damage_at_range(ranges, 2, 50)
-    prof = hit_profile(mults, 2)
-    print(format_combinations(shot_combinations(dmg, prof)))
-    print("shots only:", stk_range_shotsonly(dmg, prof))
-    print("lowest_stk C7A2:", lowest_stk(ranges, mults, 1))
- 
+    import data_loader
+
+    GUN_NAMES = ["M416", "VHS-D2"]        # matched ignoring case, spaces and dashes
+    STK_DISTANCES = [0, 15, 50, 90, 150]   # studs
+    COMBO_DISTANCE = 50                    # studs, for the combination breakdown
+
+    data = data_loader.load_all("data")
+    guns = data["gun_names"]
+
+    for name in GUN_NAMES:
+        gun = get_gun(guns, name)
+        gun_id = gun["gun_id"]
+        profile = hit_profile(data["damage_multis"], gun_id)
+        rpm = get_rpm(data["fire_modes"], gun_id)   # first fire mode listed for this gun
+
+        print("=" * 60)
+        print(f"{gun['gun_name']} (gun_id {gun_id}, {rpm:.0f} rpm)")
+
+        for dist in STK_DISTANCES:
+            dmg = damage_at_range(data["damage_ranges"], gun_id, dist)
+            print(f"  @ {dist:>3} studs: dmg={dmg:.2f}, STK={stk_at_range(dmg, profile)}")
+
+        dmg = damage_at_range(data["damage_ranges"], gun_id, COMBO_DISTANCE)
+        print(f"\n  Combinations with TTK @ {COMBO_DISTANCE} studs:")
+        print("  " + format_combinations(shot_combinations(dmg, profile), rpm=rpm).replace("\n", "\n  "))
+        print("  shots only:", stk_range_shotsonly(dmg, profile))
+        print("  lowest_stk:", lowest_stk(data["damage_ranges"], data["damage_multis"], gun_id))
